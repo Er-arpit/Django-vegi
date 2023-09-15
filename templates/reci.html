@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}Home | recipi {% endblock title %}
+{% block body %}
+
+<div class="container mt-5">
+    <form action="" method="post" class="col-6 mx-auto card p-3 shadow-lg" enctype="multipart/form-data" >
+        {% csrf_token %}
+        {% if messages %}
+        {% for message in messages %}
+        {% endfor %}
+        {% endif %}
+        <h1 class="h3 mb-3 fw-normal">Add Your Receipi</h1>
+        <div class="form-floating mb-1">
+          <input type="text" name="receipi_name" class="form-control" id="floatingInput" placeholder="Username">
+          <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating mb-1">
+            <textarea name="receipi_desc" id="floatingPassword" class="form-control"  cols="30" rows="10"></textarea>
+          <label for="floatingPassword">Description</label>
+        </div>
+        <div class="form">
+          <input type="file" name="reci_img" class="form-control" id="reci_img" placeholder="Add your image">
+        </div>
+        <button class="btn btn-primary w-100 py-2 mt-1" type="submit">Add Receipi</button>
+        <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
+    </form>
+
+    {% comment %} table {% endcomment %}
+    <table class="table align-middle mb-0 bg-white mt-5">
+      <thead class="bg-light">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Delete</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for receipis in receipi %}
+        <tr>
+          <td>
+            <div class="d-flex align-items-center">
+              <img
+                  src="/reci/media/{{receipis.reci_img}}"
+                  alt=""
+                  style="width: 45px; height: 45px"
+                  class="rounded-circle"
+                  />
+              <div class="ms-3">
+                <p class="fw-bold mb-1">{{receipis.receipi_name}}</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <p class="fw-normal mb-1">{{receipis.receipi_desc}}</p>
+          </td>
+          <td>
+            <a class="btn btn-danger btn-rounded" href="/reci/delete_reci/{{receipis.id}}/">
+              Delete
+            </a>
+            
+          </td>
+          <td>
+            <a class="btn btn-warning btn-rounded" href="/reci/update_reci/{{receipis.id}}/">
+              Edit
+            </a>
+          </td>
+        </tr>
+       {% endfor %}
+      </tbody>
+    </table>
+</div>
+ 
+{% endblock body %}

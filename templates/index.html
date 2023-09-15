@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+{{request.user}}
+<div class = "container-fluid px-0">
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/img/1.jfif" class="d-block w-100" alt="dark-forest" height="500px" width="300px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/2.jfif" class="d-block w-100" alt="mango-ice" height="500px" width="300px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/3.jfif" class="d-block w-100" alt="black-barry" height="500px" width="300px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      
+      <div class="container-fluid p-3 mb-2 bg-dark text-white">
+        <h1 class="text-center">Select Your ice-cream</h1>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/4.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/5.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/7.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/8.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/9.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/10i.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/44.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/12i.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="/static/img/13i.jfif" class="d-block w-100" alt="black-barry" height="225px" width="225px">
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/checkout"><button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!-- feedback -->
+<div class="container marketing ">
+
+  <h1 class="text-center">Customers Feedback</h1>
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col-lg-4">
+      <img src="/static/img/20i.jfif" class="d-block rounded-circle" alt="black-barry" height="160px" width="160px">
+      <h2 class="fw-normal">John Keri</h2>
+      <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img src="/static/img/24i.jfif" class="d-block rounded-circle" alt="black-barry" height="160px" width="160px">
+      <h2 class="fw-normal">Timm</h2>
+      <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img src="/static/img/21i.jfif" class="d-block rounded-circle" alt="black-barry" height="160px" width="160px">
+      <h2 class="fw-normal">Barlin</h2>
+      <p>And lastly this, the third column of representative placeholder content.</p>
+      <p><a class="btn btn-secondary" href="#">View details »</a></p>
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+</div>
+</div>
+{% endblock body %}
